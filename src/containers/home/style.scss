@@ -1,0 +1,188 @@
+/* .home styles */
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .home__text-warpper styles */
+.home__text-warpper {
+  display: flex;
+  flex-direction: column; /* Changed flex-direction */
+  align-items: center;
+  text-align: center; /* Added for centering text */
+}
+
+.home__text-warpper h1 {
+  margin: 20px 0; /* Adjusted margin */
+  font-weight: 800;
+  font-size: 8rem; /* Adjusted font size */
+  line-height: 5rem; /* Adjusted line height */
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  -webkit-background-clip: text;
+  padding: calc(calc(1em / 16) / 2);
+  letter-spacing: calc(calc(1em / 15));
+  animation: typing 3.5s steps(40, end);
+  border-radius: 10px;
+  color: rgb(168, 245, 4);
+  font-family: Tahoma;
+  text-shadow: 4px 3px 0px rgb(1, 1, 248), 9px 8px 0px rgba(11, 9, 10, 0.99);
+}
+
+.home__text-warpper h1:hover {
+  color: rgb(2, 217, 245);
+  background-color: rgb(86, 250, 4);
+}
+
+.prince {
+  position: relative;
+  font-size: 90px;
+  color: rgb(5, 247, 5);
+  text-shadow: 4px 3px 0px rgb(1, 1, 248), 9px 8px 0px rgba(12, 12, 12, 0.99);
+}
+
+/* Responsive styles for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .prince {
+    font-size: 60px;
+    text-shadow: 3px 2px 0px rgb(1, 1, 248), 6px 5px 0px rgba(12, 12, 12, 0.99);
+  }
+}
+
+/* Responsive styles for screens with a max-width of 480px */
+@media (max-width: 480px) {
+  .prince {
+    font-size: 40px;
+    text-shadow: 2px 1px 0px rgb(1, 1, 248), 4px 3px 0px rgba(12, 12, 12, 0.99);
+  }
+}
+
+/* .web styles */
+.web {
+  font-size: 25px;
+  letter-spacing: 0px;
+  position: relative;
+  margin-top: 20px; /* Added margin-top */
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 550px) {
+  .home__text-warpper h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 20px; /* Adjusted margin */
+  }
+  .web {
+    font-size: 16px; /* Adjusted font size */
+  }
+}
+
+/* .home__contact-me styles */
+.home__contact-me {
+  display: flex;
+  flex-direction: column; /* Changed flex-direction */
+  align-items: center; /* Center button horizontally */
+  margin-top: 20px; /* Adjusted margin-top */
+}
+
+/* .btn styles */
+.btn {
+  cursor: pointer;
+  padding: 10px 70px;
+  font-size: 2rem;
+  background: transparent;
+  color: rgb(119, 248, 5);
+  border: 1.5px solid;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: rgb(5, 247, 5);
+  color: #000000;
+}
+
+/* Social icons styles */
+.social-icons {
+  display: flex;
+  position: fixed;
+  top: 80%;
+  transform: translateX(-50%);
+  left: 50%;
+  gap: 20px;
+}
+
+.icon-link {
+  font-size: 24px;
+  color: wheat;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 -10px 20px hsl(125, 99%, 49%);
+  border-radius: 50%;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.icon-link:last-child {
+  margin-bottom: 0;
+}
+
+.icon-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(2, 246, 31, 0.915);
+  color: rgb(5, 247, 5);
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    top: auto;
+    bottom: 20px;
+    transform: translateX(0%);
+    left: 0;
+    flex-direction: row;
+  }
+
+  .icon-link {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+/* .video styles */
+.video {
+  position: absolute; /* Corrected "position" typo */
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+/* .cursor styles */
+.cursor {
+  background-color: transparent;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  border: 2px solid #02fa44;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(58, 251, 5, 0.956) 0px -12px 30px, rgba(134, 249, 2, 0.956) 0px 4px 6px,
+    rgba(106, 251, 3, 0.972) 0px 12px 13px, rgba(12, 243, 0, 0.953) 0px -3px 5px;
+  transition: transform 0.15s ease;
+  mix-blend-mode: difference;
+}
