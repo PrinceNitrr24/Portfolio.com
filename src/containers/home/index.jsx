@@ -153,7 +153,7 @@ const Home = () => {
               onMouseEnter={text1Enter}
               onMouseLeave={text1Leave}
             >
-              Hire Me!
+              Hire Me!!
             </button>
           </div>
         </Animate>
